@@ -1,0 +1,6 @@
+version: "2"
+services:
+  scala-akka:
+    image: ubuntu:16.04
+    command: ['/bin/bash']
+registries: {}
