@@ -12,4 +12,5 @@
     - name: Install missing python 2.7 and 3
       raw: 'which python || (apt-get -q -y update && apt-get install -q -y python python3)'
   roles:
-    - { role: java8 }
+    - role: java8
+    - role: sbt

@@ -1,0 +1,25 @@
+---
+
+- name: Install apt https
+  apt:
+    name: apt-transport-https
+    state: latest
+
+- name: Add sbt deb repository
+  apt_repository:
+    repo: deb https://dl.bintray.com/sbt/debian /
+
+- name: Add sbt key
+  apt_key:
+    keyserver: hkp://keyserver.ubuntu.com:80
+    id: 2EE0EA64E40A89B84B2DF73499E82A75642AC823
+
+- name: Update packages before sbt install
+  apt:
+    update_cache: yes
+
+- name: Install sbt
+  apt:
+    name: sbt
+    state: latest
+    allow_unauthenticated: yes

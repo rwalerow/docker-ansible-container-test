@@ -1,6 +1,6 @@
 version: "2"
 services:
   scala-akka:
-    image: ubuntu:16.04
+    image: debian:jessie
     command: ['/bin/bash']
 registries: {}
