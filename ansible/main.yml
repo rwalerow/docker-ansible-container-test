@@ -14,6 +14,9 @@
   roles:
     - role: java8
     - role: sbt
+    - role: test-jre-18-131
+    - role: test-jdk-18-131
+    - role: test-sbt-0-13-8
 
 - hosts: java-raw
   gather_facts: false
@@ -22,3 +25,4 @@
       raw: 'which python || (apt-get -q -y update && apt-get install -q -y python python3)'
   roles:
     - role: java8-jre
+    - role: test-jre-18-131

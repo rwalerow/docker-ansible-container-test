@@ -1,0 +1,12 @@
+---
+
+- name: Register java version
+  shell: /usr/bin/java -version
+  register: java_version_output
+  tags: test
+
+- name: Check whether valid java version is present
+  tags: test
+  assert:
+    that:
+      - "'1.8.0_131' in java_version_output.stderr"

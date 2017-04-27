@@ -1,0 +1,15 @@
+---
+- name: Register java version
+  shell: /usr/bin/java -version
+  register: java_version_output
+  tags: test
+
+- name: Register javac version
+  shell: /usr/bin/javac -version
+  register: javac_version_output
+  tags: test
+
+- name: Register sbt version
+  shell: /usr/bin/sbt sbtVersion
+  register: sbt_version_output
+  tags: test

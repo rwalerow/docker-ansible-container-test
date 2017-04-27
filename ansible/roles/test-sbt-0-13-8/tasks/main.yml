@@ -1,0 +1,7 @@
+---
+
+- name: Check whether valid sbt version is present
+  tags: test
+  assert:
+    that:
+      - "'0.13.15' in sbt_version_output.stdout"
